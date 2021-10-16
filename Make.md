@@ -1,6 +1,6 @@
 # 清理微信僵尸粉控件id文件制作教程
 ## 微信更新，控件id不变
-微信小版本更新，一般控件id不会改变，无需制作控件id文件，只需简单修改[config.json](config/config.json)文件即可。
+微信小版本更新，一般控件id不会改变，无需制作控件id文件，只需简单修改[config.json](https://github.com/L8426936/CleanUpWeChatZombieFans/blob/master/config/config.json)文件即可。
 
 google_play_store：谷歌版微信  
 other：中国版微信  
