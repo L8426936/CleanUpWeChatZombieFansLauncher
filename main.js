@@ -9,8 +9,10 @@
         </vertical>
     );
 
-    let base_path = files.getSdcardPath() + "/Android/data/" + context.getPackageName() + "/";
+    let base_path = files.getSdcardPath() + "/Android/data/" + context.getPackageName() + "/CleanUpWeChatZombieFans/";
     let base_url = "https://gitee.com/L8426936/CleanUpWeChatZombieFans/raw/master/";
+    // 本地测试使用
+    // let base_url = "http://192.168.123.105/auto.js-script/CleanUpWeChatZombieFans/";
 
     /**
      * 初始化配置
@@ -49,34 +51,31 @@
                         let response = http.get(base_url + key);
                         if (response["statusCode"] == 200) {
                             current_progress += files_md5[key]["size"];
-                            ui.progressbar.setProgress(current_progress * 100 / max_progress);
-                            files.ensureDir(key);
-                            files.write(key, response.body.string());
+                            ui.run(function () {
+                                ui.progressbar.setProgress(current_progress * 100 / max_progress);
+                            });
+                            files.ensureDir(base_path + ".download_files/" + key);
+                            files.write(base_path + ".download_files/" + key, response.body.string());
                         } else {
                             completed_all_file = false;
                             break;
                         }
                     }
                     if (completed_all_file) {
+                        for (let key in files_md5) {
+                            if (!files.copy(base_path + ".download_files/" + key, base_path + key)) {
+                                completed_all_file = false;
+                                break;
+                            }
+                        }
+                    }
+                    files.removeDir(base_path + ".download_files");
+                    if (completed_all_file) {
                         ui.run(function () {
                             ui.download_message.setText("下载完成");
                         });
-                        for (let key in files_md5) {
-                            files.ensureDir(base_path + key);
-                            completed_all_file = completed_all_file && files.copy(key, base_path + key);
-                        }
-                        if (completed_all_file) {
-                            ui.run(function () {
-                                ui.download_message.setText("复制完成");
-                            });
-                            engines.execScriptFile(base_path + "main.js", {path: base_path});
-                            engines.myEngine().forceStop();
-                        } else {
-                            ui.run(function () {
-                                ui.download_message.setText("复制失败");
-                                ui.try_download.setEnabled(true);
-                            });
-                        }
+                        engines.execScriptFile(base_path + "main.js", {path: base_path});
+                        engines.myEngine().forceStop();
                     } else {
                         ui.run(function () {
                             ui.download_message.setText("下载失败");
