@@ -38,7 +38,7 @@
             try {
                 if (err || res["statusCode"] != 200) {
                     ui.run(function () {
-                        ui.download_message.setText(err || res || "下载失败");
+                        ui.download_message.setText(err["message"] || res["statusCode"] + " " + res["statusMessage"] || "下载失败");
                         ui.try_download.setEnabled(true);
                     });
                 } else {
@@ -85,7 +85,7 @@
                 }
             } catch (e) {
                 ui.run(function () {
-                    ui.download_message.setText(e);
+                    ui.download_message.setText(e["message"]);
                     ui.try_download.setEnabled(true);
                 });
             }
