@@ -208,7 +208,7 @@
 | deleted_message | android.widget.TextView | ![](res/deleted_message.jpg) | 必需 | 非必需 | 非必需 | 非必需 |  |
 | network_error | android.widget.TextView | ![](res/network_error.jpg) | 必需 | 非必需 | 非必需 | 非必需 |  |
 | system_error | android.widget.TextView | ![](res/system_error.jpg) |  必需 | 非必需 | 非必需 | 非必需 |  |
-| cancel_transfer | android.widget.TextView | 暂无图片 | 必需 | 非必需 | 非必需 | 非必需 |  |
+| cancel_transfer | android.widget.Button | ![](res/cancel_transfer.jpg) | 必需 | 非必需 | 非必需 | 非必需 |  |
 | account_deleted | android.widget.TextView | ![](res/account_deleted.jpg) | 必需 | 非必需 | 非必需 | 非必需 |  |
 | contacts | android.widget.TextView | ![](res/contacts.jpg) | 必需 | 必需 | 必需 | 必需 |  |
 | delete | android.widget.TextView | ![](res/delete.jpg) | 非必需 | 必需 | 非必需 | 非必需 |  |
