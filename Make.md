@@ -17,20 +17,20 @@
 },
 "ids_versions": {
     "google_play_store": {
-        "7.0.16-7.0.16": "7b03c7082cf95fe13edcbc02e4e7c930.json",
-        "7.0.17-7.0.17": "1f671612bfad71c4eb32b0913161014b.json",
-        "7.0.21-7.0.21": "b4d28e6166f31ad45acbe18177e37841.json",
-        "8.0.2-8.0.2": "06a3c2f981a3e4caadc3f87f8f905136.json",
-        "8.0.15-8.0.15": "b4c77a560b71ef6076ab1e09a9e18049.json"
+        "7.0.16-7.0.16": "7.0.16.json",
+        "7.0.17-7.0.17": "7.0.17.json",
+        "7.0.21-7.0.21": "7.0.21.json",
+        "8.0.2-8.0.2": "8.0.2.json",
+        "8.0.15-8.0.15": "8.0.15.json"
     },
     "other": {
-        "7.0.15-7.0.22": "c9ed3e2d805e8e67c673b4515befd220.json",
-        "8.0.0-8.0.3": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.6-8.0.7": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.9-8.0.9": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.10-8.0.11": "bf7ce1d0518cc85f40a4b31a41ff6e24.json",
-        "8.0.14-8.0.16": "5b84d0e6d965381faca22db07815cbe2.json",
-        "8.0.18-8.0.x": "803bf26d262c440f7c2358a0386e382e.json"
+        "7.0.15-7.0.22": "7.0.15.json",
+        "8.0.0-8.0.3": "8.0.0.json",
+        "8.0.6-8.0.7": "8.0.0.json",
+        "8.0.9-8.0.9": "8.0.0.json",
+        "8.0.10-8.0.11": "8.0.10.json",
+        "8.0.14-8.0.16": "8.0.14.json",
+        "8.0.18-8.0.x": "8.0.18.json"
     }
 }
 ```
@@ -49,27 +49,27 @@
 },
 "ids_versions": {
     "google_play_store": {
-        "7.0.16-7.0.16": "7b03c7082cf95fe13edcbc02e4e7c930.json",
-        "7.0.17-7.0.17": "1f671612bfad71c4eb32b0913161014b.json",
-        "7.0.21-7.0.21": "b4d28e6166f31ad45acbe18177e37841.json",
-        "8.0.2-8.0.2": "06a3c2f981a3e4caadc3f87f8f905136.json",
-        "8.0.15-8.0.15": "b4c77a560b71ef6076ab1e09a9e18049.json"
+        "7.0.16-7.0.16": "7.0.16.json",
+        "7.0.17-7.0.17": "7.0.17.json",
+        "7.0.21-7.0.21": "7.0.21.json",
+        "8.0.2-8.0.2": "8.0.2.json",
+        "8.0.15-8.0.15": "8.0.15.json"
     },
     "other": {
-        "7.0.15-7.0.22": "c9ed3e2d805e8e67c673b4515befd220.json",
-        "8.0.0-8.0.3": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.6-8.0.7": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.9-8.0.9": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.10-8.0.11": "bf7ce1d0518cc85f40a4b31a41ff6e24.json",
-        "8.0.14-8.0.16": "5b84d0e6d965381faca22db07815cbe2.json",
-        "8.0.18-8.0.19": "803bf26d262c440f7c2358a0386e382e.json",
-        "8.0.x-8.0.x": "803bf26d262c440f7c2358a0386e382e.json"
+        "7.0.15-7.0.22": "7.0.15.json",
+        "8.0.0-8.0.3": "8.0.0.json",
+        "8.0.6-8.0.7": "8.0.0.json",
+        "8.0.9-8.0.9": "8.0.0.json",
+        "8.0.10-8.0.11": "8.0.10.json",
+        "8.0.14-8.0.16": "8.0.14.json",
+        "8.0.18-8.0.19": "8.0.18.json",
+        "8.0.x-8.0.x": "8.0.18.json"
     }
 }
 ```
 
 
-## 微信更新，控件id或控件文本改变（假设中国版微信下次发布版本为8.0.x）
+## 微信更新，控件id或控件文本改变（假设中国版微信下次发布版本为x.x.x）
 ### 控件id改变
 1. 修改[config.json](https://github.com/L8426936/CleanUpWeChatZombieFans/blob/master/config/config.json)文件
 ```
@@ -80,30 +80,30 @@
     },
     "other": {
         "min_supported_versions": "7.0.15",
-        "max_supported_versions": "8.0.x"
+        "max_supported_versions": "x.x.x"
     }
 },
 "ids_versions": {
     "google_play_store": {
-        "7.0.16-7.0.16": "7b03c7082cf95fe13edcbc02e4e7c930.json",
-        "7.0.17-7.0.17": "1f671612bfad71c4eb32b0913161014b.json",
-        "7.0.21-7.0.21": "b4d28e6166f31ad45acbe18177e37841.json",
-        "8.0.2-8.0.2": "06a3c2f981a3e4caadc3f87f8f905136.json",
-        "8.0.15-8.0.15": "b4c77a560b71ef6076ab1e09a9e18049.json"
+        "7.0.16-7.0.16": "7.0.16.json",
+        "7.0.17-7.0.17": "7.0.17.json",
+        "7.0.21-7.0.21": "7.0.21.json",
+        "8.0.2-8.0.2": "8.0.2.json",
+        "8.0.15-8.0.15": "8.0.15.json"
     },
     "other": {
-        "7.0.15-7.0.22": "c9ed3e2d805e8e67c673b4515befd220.json",
-        "8.0.0-8.0.3": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.6-8.0.7": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.9-8.0.9": "7ac23c46848768342c80eb492f8e9bdd.json",
-        "8.0.10-8.0.11": "bf7ce1d0518cc85f40a4b31a41ff6e24.json",
-        "8.0.14-8.0.16": "5b84d0e6d965381faca22db07815cbe2.json",
-        "8.0.18-8.0.19": "803bf26d262c440f7c2358a0386e382e.json",
-        "8.0.x-8.0.x": "xxx.json"
+        "7.0.15-7.0.22": "7.0.15.json",
+        "8.0.0-8.0.3": "8.0.0.json",
+        "8.0.6-8.0.7": "8.0.0.json",
+        "8.0.9-8.0.9": "8.0.0.json",
+        "8.0.10-8.0.11": "8.0.10.json",
+        "8.0.14-8.0.16": "8.0.14.json",
+        "8.0.18-8.0.19": "8.0.18.json",
+        "x.x.x-x.x.x": "x.x.x.json"
     }
 }
 ```
-2. 在[config/text_id/other/](https://github.com/L8426936/CleanUpWeChatZombieFans/blob/master/config/text_id/other/)文件夹下新增```xxx.json```（文件名随意，用于第一步的```xxx.json```），格式如下
+2. 在[config/text_id/other/](https://github.com/L8426936/CleanUpWeChatZombieFans/blob/master/config/text_id/other/)文件夹下新增文件```x.x.x.json```，格式如下
 ```
 {
     "version": "8.0.18-8.0.19",
@@ -208,7 +208,7 @@
 | deleted_message | android.widget.TextView | ![](res/deleted_message.jpg) | 必需 | 非必需 | 非必需 | 非必需 |  |
 | network_error | android.widget.TextView | ![](res/network_error.jpg) | 必需 | 非必需 | 非必需 | 非必需 |  |
 | system_error | android.widget.TextView | ![](res/system_error.jpg) |  必需 | 非必需 | 非必需 | 非必需 |  |
-| cancel_transfer | android.widget.Button | ![](res/cancel_transfer.jpg) | 必需 | 非必需 | 非必需 | 非必需 |  |
+| cancel_transfer | android.widget.Button | ![](res/cancel_transfer.jpg) | 必需 | 非必需 | 非必需 | 非必需 | desc属性 |
 | account_deleted | android.widget.TextView | ![](res/account_deleted.jpg) | 必需 | 非必需 | 非必需 | 非必需 |  |
 | contacts | android.widget.TextView | ![](res/contacts.jpg) | 必需 | 必需 | 必需 | 必需 |  |
 | delete | android.widget.TextView | ![](res/delete.jpg) | 非必需 | 必需 | 非必需 | 非必需 |  |
