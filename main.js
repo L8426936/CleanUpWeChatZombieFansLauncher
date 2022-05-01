@@ -10,7 +10,7 @@
     );
 
     let keep = true;
-    let base_path = files.getSdcardPath() + "/Android/data/" + context.getPackageName() + "/CleanUpWeChatZombieFans/";
+    let base_path = context.getExternalFilesDir("CleanUpWeChatZombieFans").getAbsolutePath() + "/";
     let base_url = "https://gitee.com/L8426936/CleanUpWeChatZombieFans/raw/master/";
     // 本地测试使用
     // let base_url = "http://192.168.123.105/auto.js-script/CleanUpWeChatZombieFans/";
@@ -20,7 +20,16 @@
      */
     function init() {
         ui.try_download.setEnabled(false);
-        if (files.exists(base_path + "main.js")) {
+        let complete = files.exists(base_path + "config/files_md5.json");
+        if (complete) {
+            for (let key in JSON.parse(files.read(base_path + "config/files_md5.json"))) {
+                if (!files.exists(base_path + key)) {
+                    complete = false;
+                    break;
+                }
+            }
+        }
+        if (complete) {
             engines.execScriptFile(base_path + "main.js", {path: base_path});
             engines.myEngine().forceStop();
         } else {
@@ -63,16 +72,10 @@
                             ui.run(function () {
                                 ui.progressbar.setProgress(current_progress * 100 / max_progress);
                             });
-                            files.ensureDir(base_path + ".cache/" + key);
-                            files.write(base_path + ".cache/" + key, response.body.string());
+                            files.ensureDir(base_path + key);
+                            files.write(base_path + key, response.body.string());
                         } else {
                             throw new Error("下载失败");
-                        }
-                    }
-                    for (let key in files_md5) {
-                        files.ensureDir(base_path + key);
-                        if (!files.copy(base_path + ".cache/" + key, base_path + key)) {
-                            throw new Error("复制失败");
                         }
                     }
                     ui.run(function () {
@@ -89,7 +92,6 @@
                     ui.try_download.setEnabled(true);
                 });
             }
-            files.removeDir(base_path + ".cache");
         });
     }
 })();
