@@ -107,43 +107,45 @@
 ```
 {
     "version": "8.0.18-8.0.19",
-    "contacts": "com\\.tencent\\.mm:id/f30",
-    "labels": "com\\.tencent\\.mm:id/kj",
-    "label": "com\\.tencent\\.mm:id/fh4",
-    "contacts_count_by_label": "com\\.tencent\\.mm:id/fh3",
-    "friend_remark_by_label": "com\\.tencent\\.mm:id/(iwg|kpx)",
-    "friend_list_by_label": "android:id/list|com\\.tencent\\.mm:id/j9w",
-    "back_to_label_list": "com\\.tencent\\.mm:id/fz",
-    "label_list": "com\\.tencent\\.mm:id/fh6",
-    "friend_list": "com\\.tencent\\.mm:id/jr",
-    "friend_remark": "com\\.tencent\\.mm:id/hga",
-    "contacts_count": "com\\.tencent\\.mm:id/bml",
-    "send_message": "com\\.tencent\\.mm:id/khu",
+    "contacts": "com.tencent.mm:id/f30",
+    "labels": "com.tencent.mm:id/kj",
+    "label": "com.tencent.mm:id/fh4",
+    "contacts_count_by_label": "com.tencent.mm:id/fh3",
+    "friend_remark_by_label": "com.tencent.mm:id/(iwg|kpx)",
+    "friend_list_by_label": "android:id/list|com.tencent.mm:id/j9w",
+    "back_to_label_list": "com.tencent.mm:id/fz",
+    "label_list": "com.tencent.mm:id/fh6",
+    "friend_list": "com.tencent.mm:id/jr",
+    "friend_remark": "com.tencent.mm:id/hga",
+    "contacts_count": "com.tencent.mm:id/bml",
+    "send_message": "com.tencent.mm:id/khu",
     "friend_details_page_list": "android:id/list",
-    "we_chat_id": "com\\.tencent\\.mm:id/bq8",
-    "account_deleted": "com\\.tencent\\.mm:id/bq7",
-    "back_to_friend_list": "com\\.tencent\\.mm:id/fz",
-    "switch_message_type": "com\\.tencent\\.mm:id/b7l",
-    "more_function_by_transfer": "com\\.tencent\\.mm:id/b3q",
-    "transfer_function": "com\\.tencent\\.mm:id/vg",
-    "payee": "com\\.tencent\\.mm:id/ino",
-    "transfer_amount": "com\\.tencent\\.mm:id/lgl",
-    "confirm_transfer": "com\\.tencent\\.mm:id/ffw",
-    "abnormal_message": "com\\.tencent\\.mm:id/guv",
-    "confirm_abnormal_message": "com\\.tencent\\.mm:id/gv3",
-    "back_to_chat": "com\\.tencent\\.mm:id/fz",
-    "back_to_chats": "com\\.tencent\\.mm:id/fz",
-    "more_function_by_delete": "com\\.tencent\\.mm:id/en",
+    "we_chat_id": "com.tencent.mm:id/bq8",
+    "account_deleted": "com.tencent.mm:id/bq7",
+    "back_to_friend_list": "com.tencent.mm:id/fz",
+    "switch_message_type": "com.tencent.mm:id/b7l",
+    "more_function_by_transfer": "com.tencent.mm:id/b3q",
+    "transfer_function": "com.tencent.mm:id/vg",
+    "payee": "com.tencent.mm:id/ino",
+    "transfer_amount": "com.tencent.mm:id/lgl",
+    "confirm_transfer": "com.tencent.mm:id/ffw",
+    "abnormal_message": "com.tencent.mm:id/guv",
+    "confirm_abnormal_message": "com.tencent.mm:id/gv3",
+    "back_to_chat": "com.tencent.mm:id/fz",
+    "back_to_chats": "com.tencent.mm:id/fz",
+    "more_function_by_delete": "com.tencent.mm:id/en",
     "more_function_by_delete_list": "android:id/list",
-    "delete": "com\\.tencent\\.mm:id/khu",
-    "confirm_delete": "com\\.tencent\\.mm:id/gv3"
+    "delete": "com.tencent.mm:id/khu",
+    "confirm_delete": "com.tencent.mm:id/gv3"
 }
 ```
-3. 使用```Auto.js```的```布局分析```功能```查看控件信息```，找到控件的```fullId```值，修改控件在json文件中对应的key的value为```fullId```的值的正则写法即可，如下图示例中的```fullId```值的正则写法```com\\.tencent\\.mm:id/f30```
+3. 使用```Auto.js```的```布局分析```功能```查看控件信息```，找到控件的```fullId```值，修改控件在json文件中对应的key的value为```fullId```的值即可，如下图示例中的```fullId```值的```com.tencent.mm:id/f30```
 
 #### 示例
-!["LayoutAnalysis"](res/layoutanalysis1.jpg)!["LayoutAnalysis"](res/layoutanalysis2.jpg)
-
+<div>
+    <img src="res/layoutanalysis1.jpg" alt="LayoutAnalysis1" width="25%" height="25%"/>
+    <img src="res/layoutanalysis2.jpg" alt="LayoutAnalysis2" width="25%" height="25%"/>
+</div>
 
 #### json文件key对应的控件
 | key | className | 位置 | 测试好友功能 | 删除好友功能 | 导入好友（标签列表）功能 | 导入好友（好友列表）功能 | 备注 |
