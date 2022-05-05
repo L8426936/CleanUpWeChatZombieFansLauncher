@@ -1,4 +1,7 @@
 # 清理微信僵尸粉控件id文件制作教程
+
+## 使用运行方式二，则以下文件在SD卡的路径为```Android/data/com.l8426936.cleanupwechatzombiefanslauncher/files/CleanUpWeChatZombieFans/```
+
 ## 微信更新，控件id和控件文本不变
 微信小版本更新，一般控件id和控件文本不会改变，无需制作控件id文件，修改text文件，只需简单修改[config.json](https://github.com/L8426936/CleanUpWeChatZombieFans/blob/master/config/config.json)文件即可。
 
